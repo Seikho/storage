@@ -8,6 +8,7 @@
         "./*.ts"
     ],
     "files": [
+        "ls-storage.d.ts",
         "ls-storage.ts"
     ]
 }
