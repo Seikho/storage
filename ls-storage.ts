@@ -1,6 +1,6 @@
 export = store;
 
-function store(key: string, value?: string) {
+function store(key: string, value?: any) {
     var hasLocalStore = !!localStorage;
     
     var fn = hasLocalStore
@@ -11,19 +11,19 @@ function store(key: string, value?: string) {
     fn(key, value);
 }
 
-function useStorage(key: string, value?: string): any|void {
+function useStorage(key: string, value?: any): any|void {
     if (!value)
         return JSON.parse(localStorage.getItem(key));
 
     localStorage.setItem(key, JSON.stringify(value));
 }
 
-function useCookies(key: string, value?: string): any|void {
+function useCookies(key: string, value?: any): any|void {
     if (!value) {
         var cookie = "; " + document.cookie;
         var parts = cookie.split("; " + key + "=");
         if (parts.length == 2) return JSON.parse(parts.pop().split(";").shift());
-        throw new Error(`Cookie '${key}' not found`);
+        return void 0;
     }
     
     var oneYear = new Date();

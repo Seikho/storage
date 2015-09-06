@@ -18,7 +18,7 @@ function useCookies(key, value) {
         var parts = cookie.split("; " + key + "=");
         if (parts.length == 2)
             return JSON.parse(parts.pop().split(";").shift());
-        throw new Error("Cookie '" + key + "' not found");
+        return void 0;
     }
     var oneYear = new Date();
     oneYear.setTime(oneYear.getTime() + (365 * 24 * 60 * 60 * 1000));
