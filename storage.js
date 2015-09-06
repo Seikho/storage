@@ -17,10 +17,11 @@ function useCookies(key, value) {
         var cookie = "; " + document.cookie;
         var parts = cookie.split("; " + key + "=");
         if (parts.length == 2)
-            return parts.pop().split(";").shift();
+            return JSON.parse(parts.pop().split(";").shift());
         throw new Error("Cookie '" + key + "' not found");
     }
     var oneYear = new Date();
     oneYear.setTime(oneYear.getTime() + (365 * 24 * 60 * 60 * 1000));
-    document.cookie = key + "=" + value + ";expires=" + oneYear.toUTCString() + "; path=/ ";
+    document.cookie = key + "=" + JSON.stringify(value) + ";expires=" + oneYear.toUTCString() + "; path=/";
 }
+module.exports = store;
