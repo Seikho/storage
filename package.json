@@ -1,6 +1,6 @@
 {
   "name": "ls-storage",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "simple browser localStorage wrapper with cookies fallback",
   "main": "storage.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/longshot-io/storage.git"
+    "url": "git+https://github.com/seikho/storage.git"
   },
   "keywords": [
     "longshot",
