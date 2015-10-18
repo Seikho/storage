@@ -4,11 +4,5 @@
         "module": "commonjs",
         "sourceMap": false
     },
-    "filesGlob": [
-        "./*.ts"
-    ],
-    "files": [
-        "ls-storage.d.ts",
-        "ls-storage.ts"
-    ]
+    "exclude": ["node_modules"]
 }
