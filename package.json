@@ -5,7 +5,7 @@
   "main": "storage.js",
   "scripts": {
     "test": "mocha",
-    "build": "tsglob && tsc"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/longshot-io/storage#readme",
   "devDependencies": {
-    "ts-globber": "^0.4.3",
-    "typescript": "^1.5.3"
+    "typescript": "^1.6.2"
   }
 }
